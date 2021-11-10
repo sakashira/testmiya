@@ -1,0 +1,583 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Yu Gothic Medium', '游ゴシック Medium', 'Yu Gothic', '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'M+PLUS+Rounded+1c','Philosopher','Lato','Rampart+One' ;
+    color: #808079;
+    background: #EBF4F4;
+    font-family: 'M+PLUS+Rounded+1c';
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Lato';
+    font-size: 1rem;
+    font-weight: 400 ;
+    cursor: pointer;
+    color: #808079;
+}
+
+a:hover{
+    color: darkkhaki;
+}
+
+a:visited{
+    color: gray;
+}
+
+img{
+    max-width: 100%;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0px auto;
+    padding: 0px 5%;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Lato';
+    font-weight: 300 ;
+    font-size: 3rem;
+    color: #808079;
+    margin: 0;
+}
+
+hr {
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: #808079;
+    height: 1px;
+}
+
+section{
+    margin: 5% 0 ;
+}
+
+/* 共通部分*/
+
+
+/* header */
+
+header {
+    background-color: #59b9c6;
+    margin-top: 0;
+    padding: 40px;
+    position: relative;
+}
+
+#top{
+    height: 550px ;
+}
+
+
+header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #808079;
+    transform-origin: bottom left;
+    transform: skewY(2deg);
+    z-index: -1;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 5rem;
+    color: #fff;
+    margin: 0;
+}
+
+
+#title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#title h1{
+    filter: blur(100px);
+    animation: blur-anim2 1s linear forwards;
+}
+
+@keyframes blur-anim2 {
+    100% {  filter: blur(0); }
+  }
+
+#title p{
+    text-align: center;
+    color: #fff;
+}
+
+.big-bg{
+    background-image: url(../images/cover.svg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.page-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* nav */
+
+.main-nav{
+    font-size: 1rem;
+    margin: 0 ;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    height: 1.5rem;
+    list-style: none;
+}
+
+.main-nav li{
+    margin-right: 20px;
+}
+
+.main-nav a{
+    font-size: 1.2rem;
+    color: #EBF4F4;
+}
+
+.main-nav a:hover{
+    font-size: 2rem;
+    color: #FFF;
+}
+
+
+/* works */
+
+.grid{
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    margin-top: 6%;
+    margin-bottom: 50px;
+}
+
+.grid img:hover{
+    opacity: 0.5;
+}
+
+#more{
+    text-align: right;
+    padding-right: 10%;
+    margin-top: 20px;
+}
+
+#more a{
+    font-size: 1.25rem;
+    color: #008b8b;
+}
+
+#more a:hover{
+    font-size: 2rem;
+    color: rgb(255, 0, 120);
+    border-bottom: 2px solid rgb(255, 0, 120);
+}
+
+
+/* service */
+
+.grid2{
+    display: grid;
+    gap: 20px;
+    text-align: justify;
+    grid-template-columns: repeat(3, minmax(200px,1fr));
+    margin-top: 5%;
+    margin-bottom: 50px;
+    font-family: 'M+PLUS+Rounded+1c';
+    font-weight: 200 ;
+    letter-spacing: 0.05rem;
+    line-height: 1.5rem
+}
+
+.service figcaption {
+    font-weight: 600;
+    font-size: 1.175rem;
+    margin-top: 3%;
+    text-align: center;
+}
+
+
+#mailto {
+    text-align:center;
+    font-size: 2rem;
+    font-family: 'M+PLUS+Rounded+1c';
+    font-weight: 400;
+}
+
+#mailto button {
+    display: inline-block;
+    position: relative;
+    padding: 20px 30px;
+    text-decoration: none;
+    background-color: #59b9c6;
+    border-radius: 10px;
+    border-style: hidden;
+    color: #FFF;
+    -webkit-transition: none;
+    transition: none;
+    box-shadow: 0 6px 0 #008b8b;
+}
+
+#mailto button:hover {
+    top: 6px;
+    box-shadow: none;
+    color: #fff;
+}
+
+/* SNS */
+
+#sns {
+    padding: 4% 0;
+    margin: 0;
+}
+
+#sns .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns-box{
+    width: 30%;
+}
+
+#sns p {
+text-align: center;
+}
+
+/* footer */
+
+footer {
+	background-color: #59b9c6;
+	padding: 5%;
+    color: #FFF;
+}
+
+.square {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #808079;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.square::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -15%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #EBF4F4;
+    transform-origin: bottom right;
+    transform: skewY(2deg);
+    z-index: -1;
+}
+
+.sitemap{
+    margin: auto;
+}
+
+.sub-nav {
+    font-size: 1rem;
+    margin: 0 ;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 1.5rem;
+    list-style: none;
+}
+
+.sub-nav li {
+    padding: 20px;
+}
+
+.sub-nav a{
+    color: #FFF;
+}
+
+.sub-nav a:hover{
+    color: #808079;
+}
+
+#small {
+    text-align: center;
+}
+
+/* aboutpage */
+
+#myname{
+    text-align: center;
+    font-family: 'Lato';
+    font-weight: 300 ;
+    font-size: 2rem;
+    color: #808079;
+    margin-top: 10%;
+    margin-bottom: 7%;
+}
+
+.page-layout {
+    width: 50%;
+    margin: 0 25%;
+    margin-bottom: 50px;
+}
+
+.page-style dt {
+    clear: both;
+    float: left;
+    width: 25%;
+    padding: 1.5em 2%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-top: 1px #ddd solid;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+.page-style .dl-small {
+    border-bottom: 1px rgba(200, 200, 200, 0.5) dashed;
+    justify-self: auto;
+}
+
+.page-style dd {
+    width: 92%;
+    float: center;
+    padding: 2em 1% 2em 4%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-top: 1px #ddd solid;
+    line-height: 2;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.page-style dl {
+    width: 100%;
+    margin: 0 0 25px;
+    border-bottom: 1px #ddd solid;
+}
+
+.page-style .small-wrap {
+    margin: 2em 1%;
+}
+
+/* form */
+#contacth2 {
+    text-align: left;
+    font-family: 'Lato';
+    font-weight: 300 ;
+    font-size: 2rem;
+    color: #808079;
+    margin-top: 50px;
+    margin-bottom: 7%;
+}
+
+#toiawase {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+form div {
+    margin-bottom: 5%;
+}
+
+label {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background: rgba(255, 255, 255, .5);
+    border: 1px #fff solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    max-width: 400px;
+}
+
+textarea{
+    width: 100%;
+    max-width: 500px;
+    height: 6rem;
+    resize: none;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    position: relative;
+    padding: 10px 25px;
+    cursor: pointer;
+    margin-bottom: 4%;
+    text-decoration: none;
+    background-color: #59b9c6;
+    border-radius: 10px;
+    border-style: hidden;
+    color: #FFF;
+    -webkit-transition: none;
+    transition: none;
+    box-shadow: 0 6px 0 #008b8b;
+}
+
+input[type="submit"]:hover {
+    top: 6px;
+    box-shadow: none;
+    color: #fff;
+}
+
+
+/* koujityu */
+#kojityu {
+    font-family: 'Yu Gothic Medium', '游ゴシック Medium', 'Yu Gothic', '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'M+PLUS+Rounded+1c','Lato','Rampart One' ;
+    color: brown;
+    background: #808079;
+}
+#kojityu h1{
+    color: brown;
+    font-family: 'Rampart One';
+    font-weight: 400;
+    animation: hurueru .1s  infinite;
+}
+
+#kojityu header {
+    background-color: #ffee00;
+    margin-top: 0;
+    padding: 40px;
+    position: relative;
+}
+
+#kojityu header::before {
+    display: none;
+}
+
+#kojityu .main-nav a{
+    font-size: 1.2rem;
+    color: brown;
+}
+
+#kojityu .main-nav a:hover{
+    font-size: 2rem;
+    color: #808079;
+}
+
+#kojityu p{
+    font-family: 'M+PLUS+Rounded+1c';
+    text-align: center;
+}
+
+#kojityu footer {
+    background-color: #ffee00;
+    color: brown;
+}
+
+#kojityu .sub-nav a{
+    color: brown;
+}
+
+#kojityu .sub-nav a:hover{
+    color: #808079;
+}
+
+#neko p{
+    color: #fff;
+    font-family: 'M+PLUS+Rounded+1c';
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    animation: r4 5s steps(60) infinite;
+}
+
+@keyframes r4 {
+    0%   { transform: scale(1); }
+    50% { transform: scale(2); }
+    100% { transform: scale(1); }
+  }
+
+#neko iframe{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#matte{
+    text-align: right;
+    margin-right: 10%;
+    font-size: 0.8rem;
+}
+
+#matte:hover{
+    animation: hurueru .1s  infinite;
+}
+
+@keyframes hurueru {
+    0% {transform: translate(0px, 0px) rotateZ(0deg)}
+    25% {transform: translate(2px, 2px) rotateZ(1deg)}
+    50% {transform: translate(0px, 2px) rotateZ(0deg)}
+    75% {transform: translate(2px, 0px) rotateZ(-1deg)}
+    100% {transform: translate(0px, 0px) rotateZ(0deg)}
+}
+
+
+/* responsive */
+
+@media (max-width: 600px) {
+    .page-header{
+        flex-direction: column;
+        align-items: center;
+    }
+    .page-title{
+        font-size: 2.5rem;
+    }
+    .grid2{
+        grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    }
+
+    #sns .wrapper {
+        flex-direction: column;
+    }
+    .sns-box{
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        margin-bottom: 30px;
+    }
+
+
+
+}
